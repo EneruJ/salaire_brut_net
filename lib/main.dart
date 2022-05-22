@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Salaire Brut à Net',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Salaire Brut à Net'),
     );
   }
 }
@@ -51,7 +51,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   double statut = 0.78;
   double _value = 100;
   double _value2 = 20;
@@ -148,6 +147,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                                     inputFormatters: <TextInputFormatter>[
                                                       FilteringTextInputFormatter.digitsOnly,
                                                     ],
+                                                    onChanged: (v){
+                                                      setState(() {
+                                                        _calcSalaire();
+                                                      });
+                                                    },
                                                   ),
                                                 ),
                                                 const SizedBox(height: 20.0),
@@ -164,6 +168,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                                     inputFormatters: <TextInputFormatter>[
                                                       FilteringTextInputFormatter.digitsOnly,
                                                     ],
+                                                    onChanged: (v){
+                                                      setState(() {
+                                                        _calcSalaire();
+                                                      });
+                                                    },
                                                   ),
                                                 ),
                                               ]),
@@ -184,6 +193,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                                     inputFormatters: <TextInputFormatter>[
                                                       FilteringTextInputFormatter.digitsOnly,
                                                     ],
+                                                    onChanged: (v){
+                                                      setState(() {
+                                                        _calcSalaire();
+                                                      });
+                                                    },
                                                   ),
                                                 ),
                                                 const SizedBox(height: 20.0),
@@ -200,6 +214,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                                     inputFormatters: <TextInputFormatter>[
                                                       FilteringTextInputFormatter.digitsOnly,
                                                     ],
+                                                    onChanged: (v){
+                                                      setState(() {
+                                                        _calcSalaire();
+                                                      });
+                                                    },
                                                   ),
                                                 ),
                                                 const SizedBox(height: 20.0),
@@ -216,6 +235,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                                     inputFormatters: <TextInputFormatter>[
                                                       FilteringTextInputFormatter.digitsOnly,
                                                     ],
+                                                    onChanged: (v){
+                                                      setState(() {
+                                                        _calcSalaire();
+                                                      });
+                                                    },
                                                   ),
                                                 ),
                                               ]),
